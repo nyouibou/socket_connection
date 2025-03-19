@@ -16,10 +16,20 @@ class _SecondPageState extends State<SecondPage> {
   Widget build(BuildContext context) {
     final provider = Provider.of<WebsocketProvider>(context);
     return Scaffold(
-      backgroundColor: Colors.yellow,
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        title: Text("SECOND PAGE"),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Center(child: Text("Price:${provider.price}"))],
+        children: [
+          Center(
+              child: Text(
+            "BALANCE:${provider.price}",
+            style: TextStyle(
+                fontSize: 30, color: Colors.black, fontWeight: FontWeight.w900),
+          ))
+        ],
       ),
     );
   }

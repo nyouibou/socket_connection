@@ -16,18 +16,25 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final websocketProvider = Provider.of<WebsocketProvider>(context);
     return Scaffold(
-      backgroundColor: Colors.green,
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text("HOME PAGE"),
+        //
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
             child: Text(
-              "Price:${websocketProvider.price}",
+              "BALANCE:${websocketProvider.price}",
               style: TextStyle(
-                fontSize: 20,
-                color: Colors.white,
-              ),
+                  fontSize: 30,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w900),
             ),
+          ),
+          SizedBox(
+            height: 40,
           ),
           TextButton(
               style: ButtonStyle(
