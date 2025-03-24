@@ -26,6 +26,7 @@ class _SecondPageState extends State<SecondPage> {
           Center(
               child: Text(
             "BALANCE:${provider.price}",
+      //print balnce here
             style: TextStyle(
                 fontSize: 30, color: Colors.black, fontWeight: FontWeight.w900),
           ))
